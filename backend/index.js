@@ -65,7 +65,7 @@ function loadLocalSongs() {
         path: path.join(localMusicDir, file),
         plays: '0 plays',
         duration: '0:00',
-        url: `http://localhost:${PORT}/api/local/${file}`
+        url: `https://beats-5dm9.onrender.com/api/local/${file}`
       }));
   } catch (error) {
     console.error('Error loading local songs:', error);
@@ -222,7 +222,7 @@ app.post('/api/upload', upload.single('music'), (req, res) => {
       cover: faker.image.avatar(),
       plays: '0 plays',
       duration: '0:00',
-      url: `http://localhost:3333/api/stream/${req.file.filename}`
+      url: `https://beats-5dm9.onrender.com/api/stream/${req.file.filename}`
     };
 
     musicLibrary.push(musicFile);
