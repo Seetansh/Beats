@@ -16,7 +16,7 @@ const localMusicDir = path.join(__dirname, 'music_gallery');
 
 // Enable CORS for React frontend
 app.use(cors({
-  origin: 'http://beats-three.vercel.app'
+  origin: 'https://beats-three.vercel.app'
 }));
 app.use(express.json());
 
