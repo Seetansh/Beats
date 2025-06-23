@@ -149,9 +149,9 @@ const Dashboard2 = () => {
                 </Box>
 
                 {/* GENRES + TOP CHARTS */}
-                <Box sx={{ display: 'flex', gap: 3, padding: '0 3rem', flexWrap: 'wrap' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '0 3rem', flexWrap: 'wrap' }}>
                     {/* Genres */}
-                    <Box sx={{ flex: '1 1 50%', minWidth: 300, maxWidth: '60%' }}>
+                    <Box sx={{ flex: '1 1 50%', minWidth: 300, Width: '100%' }}>
                         <Paper sx={{ p: 2, borderRadius: 3, bgcolor: '#18181c', maxWidth: '100%' }}>
                             <Typography variant="h6" sx={{ mb: 2, color: '#fff' }}>Genres</Typography>
                             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
