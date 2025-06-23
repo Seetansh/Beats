@@ -281,5 +281,5 @@ app.get('/api/stream/:filename', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Music server running on http://localhost:${PORT}`);
+  console.log(`Server is started sir!`);
 });
