@@ -36,8 +36,8 @@ const Dashboard2 = () => {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await fetch('https://beats-three.vercel.app/api/music');
-                const responseArtist = await fetch('https://beats-three.vercel.app/api/artist');
+                const response = await fetch('https://beats-5dm9.onrender.com/api/music');
+                const responseArtist = await fetch('https://beats-5dm9.onrender.com/api/artist');
                 const data = await response.json();
                 const dataArtist = await responseArtist.json();
                 setTopCharts(data.data);
