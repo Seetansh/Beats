@@ -117,34 +117,72 @@ const Dashboard2 = () => {
                     </Box>
                 </Paper>
 
-                {/* TOP ARTISTS */}
-                <Box sx={{ mb: 4, p: 3 }}>
-                    <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: '#fff' }}>
-                        Top Artists
-                    </Typography>
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
-                        {topArtists.map(({ name, plays, avatar }, i) => (
-                            <Box
-                                key={i}
-                                sx={{
-                                    flex: '1 0 16%',
-                                    minWidth: 120,
-                                    maxWidth: 200,
-                                }}
-                            >
-                                <Paper sx={{ p: 2, textAlign: 'center', color: '#fff', borderRadius: 3, bgcolor: '#18181c' }}>
-                                    <Avatar
-                                        src={avatar}
-                                        alt={name}
-                                        sx={{ width: 60, height: 60, mx: 'auto', mb: 1 }}
-                                    />
-                                    <Typography variant="subtitle1">{name}</Typography>
-                                    <Typography variant="caption" color="#fff">
-                                        {plays}M Plays
-                                    </Typography>
-                                </Paper>
+                <Box sx={{ display: 'flex', padding: '0 3rem', gap: 4 }}>
+                    {/* TOP ARTISTS */}
+                    <Box sx={{ mb: 4, p: 3, maxWidth: '70%', flex: 1 }}>
+                        <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: '#fff' }}>
+                            Top Artists
+                        </Typography>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+                            {topArtists.map(({ name, plays, avatar }, i) => (
+                                <Box
+                                    key={i}
+                                    sx={{
+                                        flex: '1 0 16%',
+                                        minWidth: 120,
+                                        maxWidth: 200,
+                                    }}
+                                >
+                                    <Paper sx={{ p: 2, textAlign: 'center', color: '#fff', borderRadius: 3, bgcolor: '#18181c' }}>
+                                        <Avatar
+                                            src={avatar}
+                                            alt={name}
+                                            sx={{ width: 60, height: 60, mx: 'auto', mb: 1 }}
+                                        />
+                                        <Typography variant="subtitle1">{name}</Typography>
+                                        <Typography variant="caption" color="#fff">
+                                            {plays}M Plays
+                                        </Typography>
+                                    </Paper>
+                                </Box>
+                            ))}
+                        </Box>
+                    </Box>
+
+                    {/* MUSIC PLAYER */}
+                    <Box sx={{ boxShadow: '0 5px 30px rgba(255, 255, 255, 0.2)', width: '30%', borderRadius: 3, mb: 4 }}>
+                        <Paper sx={{ bgcolor: 'inherit', borderRadius: 3 }}>
+                            <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <Avatar
+                                    src="https://via.placeholder.com/300"
+                                    alt="Now Playing"
+                                    sx={{ width: 100, height: 100, mb: 2 }}
+                                />
+                                <Typography variant="h6" sx={{ mb: 1, color: '#fff' }}>
+                                    Now Playing
+                                </Typography>
+                                <Typography variant="subtitle1" sx={{ mb: 2, color: '#fff' }}>
+                                    In My Feelings - Camila Cabello
+                                </Typography>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                    <IconButton color="primary">
+                                        <SkipPreviousIcon />
+                                    </IconButton>
+                                    <IconButton color="primary">
+                                        <PlayArrowIcon fontSize="large" />
+                                    </IconButton>
+                                    <IconButton color="primary">
+                                        <SkipNextIcon />
+                                    </IconButton>
+                                </Box>
+                                <Slider
+                                    defaultValue={30}
+                                    aria-label="Volume"
+                                    valueLabelDisplay="auto"
+                                    sx={{ width: '80%', mt: 2 }}
+                                />
                             </Box>
-                        ))}
+                        </Paper>
                     </Box>
                 </Box>
 
@@ -234,7 +272,7 @@ const Dashboard2 = () => {
             </Box>
 
             {/* RIGHT SIDEBAR PLAYER */}
-            <Box sx={{
+            {/* <Box sx={{
                 height: '100vh',
                 width: '300px',
                 bgcolor: 'transparent',
@@ -243,42 +281,9 @@ const Dashboard2 = () => {
                 justifyContent: 'center',
                 p: 2
             }}>
-                <Box sx={{ boxShadow: '0 5px 30px rgba(255, 255, 255, 0.2)' }}>
-                    <Paper sx={{ bgcolor: 'inherit', borderRadius: 3 }}>
-                        <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Avatar
-                                src="https://via.placeholder.com/300"
-                                alt="Now Playing"
-                                sx={{ width: 100, height: 100, mb: 2 }}
-                            />
-                            <Typography variant="h6" sx={{ mb: 1, color: '#fff' }}>
-                                Now Playing
-                            </Typography>
-                            <Typography variant="subtitle1" sx={{ mb: 2, color: '#fff' }}>
-                                In My Feelings - Camila Cabello
-                            </Typography>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                <IconButton color="primary">
-                                    <SkipPreviousIcon />
-                                </IconButton>
-                                <IconButton color="primary">
-                                    <PlayArrowIcon fontSize="large" />
-                                </IconButton>
-                                <IconButton color="primary">
-                                    <SkipNextIcon />
-                                </IconButton>
-                            </Box>
-                            <Slider
-                                defaultValue={30}
-                                aria-label="Volume"
-                                valueLabelDisplay="auto"
-                                sx={{ width: '80%', mt: 2 }}
-                            />
-                        </Box>
-                    </Paper>
-                </Box>
+               
 
-            </Box>
+            </Box>*/}
         </Box >
     );
 };
