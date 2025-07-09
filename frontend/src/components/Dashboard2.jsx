@@ -235,7 +235,7 @@ const Dashboard2 = () => {
 
             {/* RIGHT SIDEBAR PLAYER */}
             <Box sx={{
-                height: 'auto',
+                height: '100vh',
                 width: '300px',
                 bgcolor: 'transparent',
                 display: 'flex',
