@@ -66,8 +66,8 @@ export default function Sidebar() {
                 <Typography variant="h4" component="h4" sx={{ paddingLeft: '10px', color: 'white', marginTop: '30px', marginLeft: '50px' }}>
                     <BlurOnIcon /> Beats
                 </Typography>
-                <Toolbar />
-                <Box sx={{ marginLeft: '20px' }}>
+                {/* <Toolbar /> */}
+                <Box sx={{ marginLeft: '20px', marginTop: 3 }}>
                     <Typography variant="h6" component="h6" sx={{ paddingLeft: '10px', color: 'grey' }}>
                         Menu
                     </Typography>

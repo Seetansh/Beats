@@ -54,7 +54,7 @@ const Dashboard2 = () => {
             {/* LEFT MAIN SECTION */}
             <Box sx={{ flex: 1 }}>
                 {/* NAVBAR */}
-                <AppBar position="static" elevation={1} sx={{ bgcolor: 'transparent' }}>
+                <AppBar position="static" elevation={1} sx={{ bgcolor: 'inherit', p: 2 }}>
                     <Toolbar>
                         <Box sx={{ display: 'flex', gap: 2 }}>
                             <Button>MUSIC</Button>
@@ -234,49 +234,50 @@ const Dashboard2 = () => {
             </Box>
 
             {/* RIGHT SIDEBAR PLAYER */}
-            <Box
-                sx={{
-                    width: '20%',
-                    bgcolor: '#18181c',
-                    p: 3,
-                    boxShadow: 3,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    color: '#fff',
-                }}
-            >
-                <img
-                    src={bg}
-                    alt="butterfly"
-                    style={{ borderRadius: 12, marginBottom: 16, height: '20%' }}
-                    className="player-img"
-                />
-                <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                    Butterfly Effect
-                </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 2, color: '#fff' }}>
-                    Travis Scott • Best of 2020
-                </Typography>
-                <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
-                    <Typography variant="caption">2:45</Typography>
-                    <Slider size="small" sx={{ flex: 1 }} />
-                    <Typography variant="caption">1:00</Typography>
+            <Box sx={{
+                height: 'auto',
+                width: '300px',
+                bgcolor: 'transparent',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                p: 2
+            }}>
+                <Box sx={{ boxShadow: '0 5px 30px rgba(255, 255, 255, 0.2)' }}>
+                    <Paper sx={{ bgcolor: 'inherit', borderRadius: 3 }}>
+                        <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Avatar
+                                src="https://via.placeholder.com/300"
+                                alt="Now Playing"
+                                sx={{ width: 100, height: 100, mb: 2 }}
+                            />
+                            <Typography variant="h6" sx={{ mb: 1, color: '#fff' }}>
+                                Now Playing
+                            </Typography>
+                            <Typography variant="subtitle1" sx={{ mb: 2, color: '#fff' }}>
+                                In My Feelings - Camila Cabello
+                            </Typography>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                <IconButton color="primary">
+                                    <SkipPreviousIcon />
+                                </IconButton>
+                                <IconButton color="primary">
+                                    <PlayArrowIcon fontSize="large" />
+                                </IconButton>
+                                <IconButton color="primary">
+                                    <SkipNextIcon />
+                                </IconButton>
+                            </Box>
+                            <Slider
+                                defaultValue={30}
+                                aria-label="Volume"
+                                valueLabelDisplay="auto"
+                                sx={{ width: '80%', mt: 2 }}
+                            />
+                        </Box>
+                    </Paper>
                 </Box>
-                <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-                    <IconButton color="primary">
-                        <SkipPreviousIcon />
-                    </IconButton>
-                    <IconButton color="primary" sx={{ bgcolor: 'primary.main', color: 'white' }}>
-                        <PlayArrowIcon />
-                    </IconButton>
-                    <IconButton color="primary">
-                        <SkipNextIcon />
-                    </IconButton>
-                </Box>
-                <Button variant="outlined" color="primary" sx={{ borderRadius: 8 }}>
-                    LYRICS
-                </Button>
+
             </Box>
         </Box >
     );
